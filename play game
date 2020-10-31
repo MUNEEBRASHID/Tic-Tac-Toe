@@ -1,0 +1,51 @@
+print("WELCOME TO TIC TAC TOE GAME")
+while True:
+    the_board=[' ']*10
+    display_board(the_board)
+    player1_marker, player2_marker=player_input()
+    turn=choose_player()
+    print(turn+" will go first")
+    play_game=input("ready to play? y or n: ")
+    if play_game.upper()=='Y':
+        game_on=True
+    else:
+        game_on=False
+    while game_on:
+        if turn=="Player_1":
+            display_board(the_board)
+            position=choose_position()
+            text(the_board,player1_marker,position)
+            if win_or_lose(the_board,player1_marker):
+                display_board(the_board)
+                print("Congrats! Player2 You won")
+                game_on=False
+            else:
+                if check_board_space(the_board):
+                    display_board(the_board)
+                    print("TIE GAME")
+                    game_on= False
+                else:
+                    turn='Player_2'
+            
+        else:
+            display_board(the_board)
+            position=choose_position()
+            text(the_board,player2_marker,position)
+            if win_or_lose(the_board,player2_marker):
+                display_board(the_board)
+                print("Congrats! Player2 You won")
+                game_on=False
+            else:
+                if check_board_space(the_board):
+                    display_board(the_board)
+                    print("TIE GAME")
+                    game_on= False
+                else:
+                    turn='Player_1'
+            
+            
+    if not replay():
+        print("THANK YOU FOR PLAYING")
+        
+        break
+
