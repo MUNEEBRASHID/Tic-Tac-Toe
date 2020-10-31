@@ -1,0 +1,3 @@
+def text(board,mark,position):
+    
+    board[position]=mark
