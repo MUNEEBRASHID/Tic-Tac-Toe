@@ -1,0 +1,8 @@
+import random
+
+def choose_player():
+    fair=random.randint(0,1)
+    if fair==0:
+        return 'player_1'
+    else:
+        return 'player_2'
