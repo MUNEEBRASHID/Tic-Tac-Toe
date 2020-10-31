@@ -1,0 +1,11 @@
+def space_or_not(board,position):
+    return board[position]==' '
+    
+    
+    
+    
+def check_board_space(board,):
+    for i in range(1,10):
+        if space_or_not(board,i):
+            return False
+    return True #no space available 
