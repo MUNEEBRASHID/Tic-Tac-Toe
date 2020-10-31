@@ -1,0 +1,2 @@
+def replay():
+    x=input("press enter to play again or 'x' to exit")
