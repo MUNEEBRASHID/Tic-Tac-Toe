@@ -1,0 +1,11 @@
+def player_input():
+    mark='Wrong'
+    while mark not in ('X','O'):
+        mark=input("Player_1 choose your mark: ").upper()
+        if mark not in ('X','O'):
+            print("choose X or O")
+            
+    if mark.upper()=='X':
+        return('X','O')
+    else:
+        return('O','X')
